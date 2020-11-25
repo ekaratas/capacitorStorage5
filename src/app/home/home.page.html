@@ -7,14 +7,27 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-item>
+  <ion-label>Key</ion-label>
+  <ion-input [(ngModel)]="anahtar"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>id</ion-label>
+  <ion-input [(ngModel)]="id"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Ad</ion-label>
+  <ion-input [(ngModel)]="name"></ion-input>
+</ion-item>
+  <br>
+  <ion-button expand="full" color="secondary" (click)="ekle()">Kaydet</ion-button>
+  <br>
+  <ion-button expand="full" color="success" (click)="getObject()">Oku</ion-button>
+  <br>
+  <ion-button expand="full" color="warning" (click)="keys()">Listele</ion-button>
+  <br>
+  <ion-button expand="full" color="tertiary" (click)="removeItem()">Anahtar Sil</ion-button>
+  <br>
+  <ion-button expand="full" color="danger" (click)="clear()">Storage Boşalt</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
 </ion-content>
