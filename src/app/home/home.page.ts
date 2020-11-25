@@ -32,6 +32,8 @@ export class HomePage {
 
   async diziSetObject() {
     await Storage.set({
+       //key olarak verilen değer cihazın storage alanında saklanması için gerekli değişken adıdır. 
+    //Başka bir app yaparsak ve aynı değişkeni kullanırsak diye önlem almak için başına mevcut uygulamanın adını (capStore_) yazdık.
       key: 'capStore_'+ this.anahtar,
       value: JSON.stringify(this.Dizi)
     });
@@ -40,6 +42,8 @@ export class HomePage {
   // JSON "set" example
 async setObject() {
   await Storage.set({
+    //key olarak verilen değer cihazın storage alanında saklanması için gerekli değişken adıdır. 
+    //Başka bir app yaparsak ve aynı değişkeni kullanırsak diye önlem almak için başına mevcut uygulamanın adını (capStore_) yazdık.
     key: 'capStore_'+ this.anahtar,
     value: JSON.stringify({
       id: this.id,
@@ -50,6 +54,8 @@ async setObject() {
 
 // JSON "get" example
 async getObject() {
+    //key olarak verilen değer cihazın storage alanında saklanması için gerekli değişken adıdır. 
+    //Başka bir app yaparsak ve aynı değişkeni kullanırsak diye önlem almak için başına mevcut uygulamanın adını (capStore_) yazdık.
   const ret = await Storage.get({ key: 'capStore_'+ this.anahtar });
   const user = JSON.parse(ret.value);
   console.log(user);
@@ -57,12 +63,18 @@ async getObject() {
 
   async setItem() {
     await Storage.set({
+    //key olarak verilen değer cihazın storage alanında saklanması için gerekli değişken adıdır. 
+    //Başka bir app yaparsak ve aynı değişkeni kullanırsak diye önlem almak için başına mevcut uygulamanın adını (capStore_) yazdık.
+      
       key: 'capStore_'+ this.anahtar,
       value: this.name
     });
   }
   
   async getItem() {
+    //key olarak verilen değer cihazın storage alanında saklanması için gerekli değişken adıdır. 
+    //Başka bir app yaparsak ve aynı değişkeni kullanırsak diye önlem almak için başına mevcut uygulamanın adını (capStore_) yazdık.
+      
     const { value } = await Storage.get({ key: 'capStore_'+ this.anahtar });
     console.log('Got item: ', value);
   }
